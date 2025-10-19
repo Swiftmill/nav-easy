@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavEasy GX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar__logo">NE</div>
+        <nav class="sidebar__items">
+          <button class="sidebar__item" data-url="https://chat.openai.com">
+            <span class="icon">💬</span>
+            <span class="label">ChatGPT</span>
+          </button>
+          <button class="sidebar__item" data-url="https://discord.com">
+            <span class="icon">🕹️</span>
+            <span class="label">Discord</span>
+          </button>
+          <button class="sidebar__item" data-url="https://www.spotify.com">
+            <span class="icon">🎵</span>
+            <span class="label">Spotify</span>
+          </button>
+          <button class="sidebar__item" data-url="https://www.netflix.com">
+            <span class="icon">🎬</span>
+            <span class="label">Netflix</span>
+          </button>
+          <button class="sidebar__item" data-url="https://store.steampowered.com">
+            <span class="icon">🎮</span>
+            <span class="label">Steam</span>
+          </button>
+        </nav>
+        <div class="sidebar__footer">
+          <button class="sidebar__item sidebar__item--small" id="toggle-theme">
+            <span class="icon">🌙</span>
+          </button>
+        </div>
+      </aside>
+
+      <div class="browser">
+        <header class="browser__toolbar">
+          <div class="toolbar__left">
+            <button class="toolbar__btn" id="btn-back" title="Précédent">
+              ⟵
+            </button>
+            <button class="toolbar__btn" id="btn-forward" title="Suivant">
+              ⟶
+            </button>
+            <button class="toolbar__btn" id="btn-refresh" title="Rafraîchir">
+              ⟳
+            </button>
+            <button class="toolbar__btn" id="btn-home" title="Accueil">
+              ⌂
+            </button>
+          </div>
+          <div class="toolbar__address">
+            <input
+              type="text"
+              id="address-bar"
+              placeholder="Rechercher ou entrer une adresse"
+              autocomplete="off"
+            />
+            <button class="toolbar__go" id="btn-go" title="Aller">↗</button>
+          </div>
+          <div class="toolbar__right">
+            <button class="toolbar__btn" id="btn-newtab" title="Nouvel onglet">
+              ＋
+            </button>
+          </div>
+        </header>
+
+        <main class="browser__viewport">
+          <section class="start-screen" id="start-screen">
+            <div class="start-screen__content glass">
+              <div class="start-screen__headline">
+                <h1>Bienvenue sur NavEasy GX</h1>
+                <p>
+                  Un navigateur minimaliste inspiré d'Opera GX, rapide, moderne et
+                  ultra stylé.
+                </p>
+              </div>
+              <div class="start-screen__search">
+                <form id="start-search-form">
+                  <span class="search-icon">🔍</span>
+                  <input
+                    type="text"
+                    id="start-search-input"
+                    placeholder="Rechercher sur le web"
+                    autocomplete="off"
+                  />
+                  <button type="submit">Explorer</button>
+                </form>
+              </div>
+              <div class="start-screen__grid">
+                <button class="tile" data-url="https://www.youtube.com">
+                  <span class="tile__icon">▶</span>
+                  <span class="tile__label">YouTube</span>
+                </button>
+                <button class="tile" data-url="https://www.twitch.tv">
+                  <span class="tile__icon">🔮</span>
+                  <span class="tile__label">Twitch</span>
+                </button>
+                <button class="tile" data-url="https://www.google.com">
+                  <span class="tile__icon">◎</span>
+                  <span class="tile__label">Google</span>
+                </button>
+                <button class="tile" data-url="https://www.github.com">
+                  <span class="tile__icon">🐙</span>
+                  <span class="tile__label">GitHub</span>
+                </button>
+                <button class="tile" data-url="https://store.epicgames.com">
+                  <span class="tile__icon">⚡</span>
+                  <span class="tile__label">Epic</span>
+                </button>
+                <button class="tile" data-url="https://mail.google.com">
+                  <span class="tile__icon">✉</span>
+                  <span class="tile__label">Gmail</span>
+                </button>
+                <button class="tile" data-url="https://www.reddit.com">
+                  <span class="tile__icon">🛰️</span>
+                  <span class="tile__label">Reddit</span>
+                </button>
+                <button class="tile" data-url="https://www.amazon.fr">
+                  <span class="tile__icon">🛒</span>
+                  <span class="tile__label">Amazon</span>
+                </button>
+              </div>
+            </div>
+          </section>
+          <iframe id="browser-view" title="Fenêtre de navigation"></iframe>
+        </main>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
